@@ -30,7 +30,7 @@ const Cart = () => {
               <img src={item.image} alt={item.title} className="cart-img" />
               <div className="cart-details">
                 <h4>{item.title}</h4>
-                <p>₹ {Math.floor(item.price * 80)}</p>
+                <p>$ { item.price}</p>
                 <div className="quantity-controls">
                   <button onClick={() => decreaseQty(item.id)}>-</button>
                   <span>{item.quantity}</span>
@@ -47,7 +47,7 @@ const Cart = () => {
           ))}
 
           <div className="cart-summary">
-            <h3>Total: ₹ {Math.floor(totalAmount * 80)}</h3>
+            <h3>Total: $ {totalAmount}</h3>
             <button className="checkout-btn" onClick={handleCheckout}>
               Place Order
             </button>
